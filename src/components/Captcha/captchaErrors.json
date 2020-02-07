@@ -1,0 +1,5 @@
+{
+  "captchaInvalid": "captchaInvalid",
+  "captchaInvalidError": "captchaInvalidError",
+  "captchaInvalidMessage": "Captcha information missing. Please try again."
+}

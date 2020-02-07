@@ -1,0 +1,25 @@
+.form-wrapper {
+  background-color: white;
+  color: black;
+}
+
+.select-field-wrapper {
+  color: blue;
+  float: left;
+  padding-right: 5px;
+}
+.sort-code-wrapper {
+  float: left;
+}
+.sort-class input {
+  margin-right: 15px;
+  height: 50px;
+  width: 50px;
+}
+
+.multi-part-class:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
