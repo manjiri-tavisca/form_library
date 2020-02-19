@@ -1,25 +1,30 @@
+@mixin fieldAlignment {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
 .form-wrapper {
   background-color: white;
   color: black;
 }
-
+.password-wrapper {
+  @include fieldAlignment;
+}
+.text-wrapper {
+  @include fieldAlignment;
+}
 .select-field-wrapper {
-  color: blue;
-  float: left;
-  padding-right: 5px;
+  @include fieldAlignment;
 }
-.sort-code-wrapper {
-  float: left;
+.checkbox-wrapper {
+  @include fieldAlignment;
 }
-.sort-class input {
-  margin-right: 15px;
-  height: 50px;
-  width: 50px;
+.btnSubmit {
+  @include fieldAlignment;
 }
-
-.multi-part-class:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
+.section-left-class {
+  padding: 12px;
+}
+.section-right-class {
+  padding: 12px;
 }

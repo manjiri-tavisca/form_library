@@ -1,260 +1,248 @@
 {
-      "formData":{
-      "cssClass":"form-wrapper",
-      "type":"react-hook-form",
-      "form-text-content":"",
-      "error-summary-cssClass":"error-summary-class",
-      "useYup":false,
-      "error-message-position":"top"
-    },
-    "section-left":{
-      "cssClass":"section-left-class",
-      "fields":[ 
-        {
-          "fieldType":"custom",
-          "isEnableValidation":false,
-          "name":"heading",
-          "content":"<p class='small'>*All fields are mandatory</p><h4>A bit about you</h4><p class='small'>Tell us who you are. Please make sure the names match those on your bank account.</p>"
+  "formData": {
+    "cssClass": "form-wrapper",
+    "type": "react-hook-form",
+    "form-text-content": "",
+    "error-summary-cssClass": "error-summary-class",
+    "useYup": false,
+    "error-message-position": "bottom"
+  },
+  "section-left": {
+    "cssClass": "section-left-class",
+    "fields": [
+      {
+        "fieldType": "custom",
+        "isEnableValidation": false,
+        "name": "heading",
+        "content": "<p class='small'>*All fields are mandatory</p>"
+      },
+      {
+        "field-label": {
+          "text": "First Name",
+          "cssClass": ""
         },
-        {
-          "field-label":{
-            "text":"Email Id",
-            "cssClass":"email-field-label" 
+        "isEnableValidation": true,
+        "fieldType": "text",
+        "html-input-type": "text",
+        "name": "firstName",
+        "id": "firstName",
+        "placeholder": "",
+        "wrapperCssClass": "text-wrapper",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "Firstname is required."
+          }
+        },
+        "cssClass": ""
+      },
+      {
+        "field-label": {
+          "text": "Middle Name",
+          "cssClass": ""
+        },
+        "isEnableValidation": true,
+        "fieldType": "text",
+        "html-input-type": "text",
+        "name": "middleName",
+        "id": "middleName",
+        "placeholder": "",
+        "wrapperCssClass": "text-wrapper",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "Middlename is required."
+          }
+        },
+        "cssClass": ""
+      },
+      {
+        "field-label": {
+          "text": "Last Name",
+          "cssClass": ""
+        },
+        "isEnableValidation": true,
+        "fieldType": "text",
+        "html-input-type": "text",
+        "name": "lastName",
+        "id": "lastName",
+        "placeholder": "",
+        "wrapperCssClass": "text-wrapper",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "Lastname is required."
+          }
+        },
+        "cssClass": ""
+      },
+      {
+        "field-label": {
+          "text": "Email Id",
+          "cssClass": "email-field-label"
+        },
+        "isEnableValidation": true,
+        "fieldType": "text",
+        "html-input-type": "text",
+        "name": "email",
+        "id": "email",
+        "placeholder": "Email",
+        "field-info": "",
+        "field-info-cssClass": "field-info",
+        "wrapperCssClass": "text-wrapper",
+        "validationMessagecssClass": "someCssClass",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "The email field is required"
           },
-          "isEnableValidation":true,
-          "fieldType":"text",
-          "html-input-type":"text",
-          "name":"email",
-          "id":"email",
-          "placeholder":"Email",
-          "field-info":"This is the text field",
-          "field-info-cssClass":"field-info",
-          "wrapperCssClass":"text-wrapper",
-          "validationMessagecssClass":"someCssClass",
-          "validation" :{
-            "type":"string",
-            "required":{"value":true,"message":"The email field is required"},
-            "regex":{
-              "value":"^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\ .,;:\\s@\"]+)*)|('.+'))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
-              "message":"Please enter a valid email Id"
-            },
-            "min":{"value":0,"message":"The minimum length of this field is 2"},
-            "max":{"value":0,"message":"The maximum length of this field is 4"},
-            "yup":{
-              "customType":{"value":"email","message":"The email id should be valid"}
+          "regex": {
+            "value": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\ .,;:\\s@\"]+)*)|('.+'))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+            "message": "Please enter a valid email Id"
+          },
+          "min": {
+            "value": 0,
+            "message": "The minimum length of this field is 2"
+          },
+          "max": {
+            "value": 0,
+            "message": "The maximum length of this field is 4"
+          },
+          "yup": {
+            "customType": {
+              "value": "email",
+              "message": "The email id should be valid"
             }
-          },
-          "cssClass":"email-class"
+          }
         },
-        {
-          "field-label":{
-            "text":"Password",
-            "cssClass":"password-label" 
-          },
-          "wrapperCssClass":"password-wrapper",
-          "isEnableValidation":true,
-          "fieldType":"text",
-          "html-input-type":"password",
-          "name":"password",
-          "id":"password",
-          "placeholder":"Password",
-          "field-info":"This is the password field",
-          "field-info-cssClass":"password-field-info",
-          "validationMessagecssClass":"someCssClass",
-          "validation" :{
-            "type":"string",
-            "required":{"value":true,"message":"The password field is required"},
-            "min":{"value":2,"message":"The minimum length of this field is 2"},
-            "max":{"value":4,"message":"The maximum length of this field is 4"}
-          },
-          "cssClass":"password-class"
+        "cssClass": "email-class"
+      },
+      {
+        "field-label": {
+          "text": "Password",
+          "cssClass": "password-label"
         },
-        {
-          "field-label":{
-            "text":"Gender",
-            "cssClass":"gender-field-label-class" 
+        "wrapperCssClass": "password-wrapper",
+        "isEnableValidation": true,
+        "fieldType": "text",
+        "html-input-type": "password",
+        "name": "password",
+        "id": "password",
+        "placeholder": "Password",
+        "field-info": "",
+        "field-info-cssClass": "password-field-info",
+        "validationMessagecssClass": "someCssClass",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "The password field is required"
           },
-          "isEnableValidation":true,
-          "fieldType":"select",
-          "name":"gender",
-          "id":"gender",
-          "default-value":"Select Gender...",
-          "wrapperCssClass":"select-field-wrapper-gender",
-          "optionCssClass":"option-class",
-          "options":[
-            {"value":"male","text":"Male"},
-            {"value":"female","text":"Female"}
-          ],
-          "validationMessagecssClass":"someCssClass",
-          "validation" :{
-            "type":"string",
-            "required":{"value":true,"message":"You must select a gender before proceeding"}
+          "min": {
+            "value": 2,
+            "message": "The minimum length of this field is 2"
           },
-          "cssClass":"gender-class"
+          "max": {
+            "value": 4,
+            "message": "The maximum length of this field is 4"
+          }
         },
-        {
-          "field-label":{
-            "text":"Time",
-            "cssClass":"time-field-label-class" 
-          },
-          "isEnableValidation":true,
-          "fieldType":"multi-part",
-          "fields":[
-              {
-                "fieldType":"select",
-                "name":"time-hh",
-                "id":"time",
-                "field-info":"HH",
-                "isEnableValidation":true,
-                "field-info-cssClass":"field-info",
-                "default-value":"Select Time...",
-                "wrapperCssClass":"select-field-wrapper",
-                "optionCssClass":"option-class",
-                "options": { "range":[0,24,1] },
-                "validationMessagecssClass":"someCssClass",
-                "validation" :{
-                  "type":"string",
-                  "required":{"value":true,"message":"You must select an hour before proceeding"}
-                },
-                "cssClass":"hour-class"
-              },
-              {
-                "fieldType":"select",
-                "name":"time-mm",
-                "id":"time",
-                "field-info":"MM",
-                "isEnableValidation":true,
-                "field-info-cssClass":"field-info",
-                "default-value":"Select Time...",
-                "wrapperCssClass":"select-field-wrapper",
-                "optionCssClass":"option-class",
-                "options": { "range":[0,59,1] },
-                "validationMessagecssClass":"someCssClass",
-                "validation" :{
-                  "type":"string",
-                  "required":{"value":true,"message":"You must select minutes before proceeding"}
-                },
-                "cssClass":"minutes-class"
-              }
-          ],
-          "cssClass":"multi-part-class"
+        "cssClass": "password-class"
+      },
+      {
+        "field-label": {
+          "text": "Suffix",
+          "cssClass": ""
         },
-        {
-          "field-label":{
-            "text":"Account Sort Code*",
-            "cssClass":"time-field-label-class" 
-          },
-          "name":"multi-part-account-code",
-          "isEnableValidation":true,
-          "fieldType":"multi-part",
-          "fields":[
-            {
-              "wrapperCssClass":"sort-code-wrapper",
-              "isEnableValidation":true,
-              "fieldType":"text",
-              "html-input-type":"text",
-              "name":"sort-code-01",
-              "id":"sort-01",
-              "validationMessagecssClass":"someCssClass",
-              "validation" :{
-                "type":"string",
-                "required":{"value":true,"message":"The required field length is 2"},
-                "min":{"value":2,"message":"The length of each field should be 2"},
-                "max":{"value":2,"message":"The length of each field should be 2"}
-              },
-              "cssClass":"sort-class"
-            },
-            {
-              "wrapperCssClass":"sort-code-wrapper",
-              "isEnableValidation":true,
-              "fieldType":"text",
-              "html-input-type":"text",
-              "name":"sort-code-02",
-              "id":"sort-02",
-              "validationMessagecssClass":"someCssClass",
-              "validation" :{
-                "type":"string",
-                "required":{"value":true,"message":"The required field length is 2"},
-                "min":{"value":2,"message":"The length of each field should be 2"},
-                "max":{"value":2,"message":"The length of each field should be 2"}
-              },
-              "cssClass":"sort-class"
-            },
-            {
-              "wrapperCssClass":"sort-code-wrapper",
-              "isEnableValidation":true,
-              "fieldType":"text",
-              "html-input-type":"text",
-              "name":"sort-code-03",
-              "id":"sort-03",
-              "validationMessagecssClass":"someCssClass",
-              "validation" :{
-                "type":"string",
-                "required":{"value":true,"message":"The required field length is 2"},
-                "min":{"value":2,"message":"The minimum length of this field is 2"},
-                "max":{"value":2,"message":"The maximum length of this field is 4"}
-              },
-              "cssClass":"sort-class"
-            }
-          ],
-          "cssClass":"multi-part-class"
+        "isEnableValidation": true,
+        "fieldType": "select",
+        "name": "suffix",
+        "id": "suffix",
+        "default-value": "Select Suffix",
+        "wrapperCssClass": "select-field-wrapper",
+        "optionCssClass": "option-class",
+        "options": [
+          {
+            "value": "",
+            "text": ""
+          }
+        ],
+        "validationMessagecssClass": "",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "This field is required"
+          }
         },
-        {
-          "field-label":{
-            "text":"Message",
-            "cssClass":"message-field-label" 
-          },
-          "isEnableValidation":true,
-          "fieldType":"textarea",
-          "name":"message",
-          "id":"message",
-          "placeholder":"Message",
-          "field-info":"This is the message field",
-          "field-info-cssClass":"message-field-info",
-          "wrapperCssClass":"text-wrapper",
-          "validationMessagecssClass":"someCssClass",
-          "validation" :{
-            "type":"string",
-            "required":{"value":true,"message":"The message field is required"},
-            "min":{"value":4,"message":"The minimum length of this field is 4"},
-            "max":{"value":0,"message":"The maximum length of this field is 10"}
-          },
-          "cssClass":"message-class"
+        "cssClass": ""
+      },
+      {
+        "field-label": {
+          "text": "Gender",
+          "cssClass": "gender-field-label-class"
         },
-        {
-          "field-label":{
-            "text":"I accept the terms and conditions",
-            "cssClass":"checkbox-field-label",
-            "position":"right"
+        "isEnableValidation": true,
+        "fieldType": "select",
+        "name": "gender",
+        "id": "gender",
+        "default-value": "Select Gender...",
+        "wrapperCssClass": "select-field-wrapper",
+        "optionCssClass": "option-class",
+        "options": [
+          {
+            "value": "male",
+            "text": "Male"
           },
-          "wrapperCssClass":"checkbox-wrapper",
-          "isEnableValidation":true,
-          "fieldType":"checkbox",
-          "html-input-type":"checkbox",
-          "name":"T&C",
-          "id":"termsAndConditions",
-          "validationMessagecssClass":"someCssClass",
-          "validation" :{
-            "type":"bool",
-            "required":{"value":true,"message":"Please accept the terms and conditions"}
-          },
-          "cssClass":"checkbox-class"
+          {
+            "value": "female",
+            "text": "Female"
+          }
+        ],
+        "validationMessagecssClass": "someCssClass",
+        "validation": {
+          "type": "string",
+          "required": {
+            "value": true,
+            "message": "You must select a gender before proceeding"
+          }
         },
-        {
-          "isEnableValidation":false,
-          "fieldType":"captcha"
+        "cssClass": "gender-class"
+      },
+      {
+        "field-label": {
+          "text": "I accept the terms and conditions",
+          "cssClass": "checkbox-field-label",
+          "position": "right"
         },
-        {
-        "isEnableValidation":false,
-        "fieldType":"submit",
-        "html-input-type":"submit",
-        "name":"submitButton",
-        "wrapperClass":"btnSubmit",
-        "text":"Submit"    
-        }
-      ]
-    }
-   
+        "wrapperCssClass": "checkbox-wrapper",
+        "isEnableValidation": true,
+        "fieldType": "checkbox",
+        "html-input-type": "checkbox",
+        "name": "T&C",
+        "id": "termsAndConditions",
+        "validationMessagecssClass": "someCssClass",
+        "validation": {
+          "type": "bool",
+          "required": {
+            "value": true,
+            "message": "Please accept the terms and conditions"
+          }
+        },
+        "cssClass": "checkbox-class"
+      },
+      {
+        "isEnableValidation": false,
+        "fieldType": "submit",
+        "html-input-type": "submit",
+        "name": "submitButton",
+        "wrapperClass": "btnSubmit",
+        "text": "Submit"
+      }
+    ]
   }
-  
-  
+}
