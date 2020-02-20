@@ -77,5 +77,4 @@ const CheckBox: React.FC<ICheckBoxProps> = props => {
     </div>
   );
 };
-
 export default CheckBox;
