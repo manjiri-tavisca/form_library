@@ -6,6 +6,7 @@ import SelectDropdown from "./formElements/SelectDropdown";
 import TextArea from "./formElements/TextArea";
 import MultiPartField from "./formElements/MultiPartField";
 import { MarkedComponent } from "@bit/manjiri-coditas.form_library.marked-component";
+import Calendar from "./formElements/Calender";
 
 export default {
   custom: function(field: any, props: any) {
@@ -126,6 +127,29 @@ export default {
       />
     );
   },
+
+  calendar: function(field: any, props: any) {
+    return (
+      <Calendar
+        key={field.name + field.cssClassName}
+        field={field}
+        register={props.register}
+        isValidateWithRegister={props.isValidateWithRegister}
+        errorMessagePosition={props.errorMessagePosition}
+        errors={props.errors}
+        customValidation={
+          props.customValidations ? props.customValidations[field.name] : {}
+        }
+        customEvents={props.customEvents}
+        isDisabled={
+          props.disabledFields && props.disabledFields.indexOf(field.name) > -1
+        }
+        errorBoxComponent={props.errorBoxComponent}
+        styles={props.styles}
+      />
+    );
+  },
+
   captcha: function(field: any, props: any) {
     return props.captchaComponent;
   }

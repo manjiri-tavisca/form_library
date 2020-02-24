@@ -45,6 +45,7 @@ const Calendar: React.FC<IFormFieldProps> = props => {
         name={calendar.name}
         ref={props.register({ ...validations })}
         {...customEvents}
+        disabled={props.isDisabled ? "disabled" : ""}
       />
 
       <ErrorBox
